@@ -1,0 +1,53 @@
+{
+  "name": "xyge-helper",
+  "displayName": "XYGE Helper",
+  "description": "心悦引擎开发辅助插件",
+  "version": "0.0.1",
+  "icon": "icon.png", 
+  "publisher": "xinyuehuyu",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openLanguageFile",
+        "title": "打开多语言表"
+      },
+      {
+        "command": "extension.addKV",
+        "title": "添加多语言Key"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.90.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2",
+    "typescript-eslint": "^8.52.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "iconv-lite": "^0.7.2",
+    "pinyin": "^4.0.0",
+    "typescript": "^5.9.3"
+  }
+}
